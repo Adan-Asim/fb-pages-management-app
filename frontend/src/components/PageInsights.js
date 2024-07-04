@@ -44,7 +44,7 @@ const PageInsights = ({ pages, accessToken }) => {
 
     try {
       const insightsResponse = await axios.get(
-        `https://graph.facebook.com/${selectedPage}/insights?access_token=${pageAccessToken}&metric=page_impressions,page_follows,page_fans,page_post_engagements${sinceParam}${untilParam}`
+        `https://graph.facebook.com/${selectedPage}/insights?access_token=${pageAccessToken}&metric=page_impressions,page_follows,page_fans,page_post_engagements&period=total_over_range${sinceParam}${untilParam}`
       );
       setInsights(insightsResponse.data);
     } catch (error) {
@@ -72,7 +72,7 @@ const PageInsights = ({ pages, accessToken }) => {
           </option>
         ))}
       </select>
-      <button className="fetch-insights-button" onClick={fetchInsights} disabled={!selectedPage || !pageAccessToken}>
+      <button className="fetch-insights-button" onClick={fetchInsights} disabled={!selectedPage || !pageAccessToken || !(since && until)}>
         Get Insights
       </button>
       {insights && (
