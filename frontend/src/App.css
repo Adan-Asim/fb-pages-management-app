@@ -36,3 +36,92 @@
     transform: rotate(360deg);
   }
 }
+
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.login-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.login-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4267B2;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.dashboard {
+  margin-top: 20px;
+}
+
+.profile {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile img {
+  border-radius: 50%;
+  margin-top: 10px;
+}
+
+.page-insights {
+  margin-top: 20px;
+}
+
+.date-range {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.page-select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.fetch-insights-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4267B2;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.fetch-insights-button:disabled {
+  background-color: #cccccc;
+}
+
+.insights {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.card {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.card h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 24px;
+  margin: 0;
+}
